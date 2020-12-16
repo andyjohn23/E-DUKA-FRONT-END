@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 .navbar {
   background-color: #383838;
+  position: sticky;
 }
 .navbar .navbar-brand {
   font-size: 25px;
@@ -9,7 +10,7 @@
   color: #ffffff;
 }
 .navbar-brand {
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 .navbar-brand img {
   width: 40px;
@@ -88,22 +89,43 @@ h4 {
   color: #ffffff;
   font-weight: bolder;
 }
+.navbar .search-form button:hover {
+  opacity: 0.75;
+  background-color: #60a6d9;
+}
 .nav-item img {
   width: 35px;
   height: 35px;
   object-fit: cover;
   margin-bottom: 0.5rem;
 }
-.cart{
+.cart {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-right: 2rem;
 }
-.cart span{
+.cart span {
   font-size: 18px;
   font-weight: bold;
   font-family: sans-serif;
   color: #ffffff !important;
   padding-left: 0.2rem;
+}
+.cart:hover{
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+.navbar .signin-link a {
+  margin-top: 0.5rem;
+  margin-right: 5rem;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #ffffff !important;
+}
+.navbar .signin-link a:hover{
+    opacity: 0.8;
+    transition: 0.3s ease;
 }
