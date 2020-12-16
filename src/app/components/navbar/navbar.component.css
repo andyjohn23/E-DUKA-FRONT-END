@@ -43,7 +43,7 @@
 .need-help h3,
 h4 {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: sans-serif;
   padding-left: 2rem;
   padding-top: 1.2rem;
@@ -75,4 +75,35 @@ h4 {
   font-family: sans-serif;
   padding-top: 1rem;
   letter-spacing: 2px;
+}
+.navbar form {
+  margin-left: 6rem;
+}
+.navbar .search-form .form-control {
+  width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navbar .search-form button {
+  background-color: #60a6d9;
+  color: #ffffff;
+  font-weight: bolder;
+}
+.nav-item img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.cart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.cart span{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #ffffff !important;
+  padding-left: 0.2rem;
 }
