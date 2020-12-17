@@ -43,7 +43,7 @@
 }
 .featured-collection .card img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .featured-collection h1 {
   font-size: 23px;
@@ -71,7 +71,7 @@
 }
 .eduka-deals .card img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .eduka-deals h1 {
   font-size: 23px;
@@ -86,23 +86,24 @@
   margin-left: -2.5rem;
   margin-bottom: 5rem;
   width: 87vw;
-  max-height: 75vh;
+  max-height: 60vh;
   margin-top: -2rem;
 }
 .eduka-featured-categories .card {
   width: 95%;
-  height: 40vh;
+  height: 33vh;
   border: none;
 }
 .eduka-featured-categories a .card:hover {
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .eduka-featured-categories .card img {
   width: 100%;
-  object-fit: contain;
+  height: 20vh;
+  object-fit: cover;
 }
 .eduka-featured-categories h1 {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
   color: #60a6d9;
