@@ -2,6 +2,7 @@
 .navbar {
   background-color: #383838;
   position: sticky;
+  z-index: 1;
 }
 .navbar .navbar-brand {
   font-size: 25px;

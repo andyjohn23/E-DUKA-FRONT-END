@@ -8,12 +8,12 @@
   font-family: sans-serif;
   color: black;
 }
-.card span {
-  font-size: 14px;
-  font-weight: 600;
+.card .initial-price {
+  font-size: 12px;
+  font-weight: normal;
   font-family: sans-serif;
   text-decoration: line-through;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 .product-cards {
   display: inline-grid;
@@ -31,10 +31,11 @@
   margin-left: -2.5rem;
   margin-bottom: 5rem;
   width: 87vw;
-  max-height: 50vh;
+  max-height: 75vh;
 }
 .featured-collection .card {
   width: 95%;
+  height: 40vh;
   border: none;
 }
 .featured-collection a .card:hover {
@@ -45,6 +46,62 @@
   object-fit: contain;
 }
 .featured-collection h1 {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #60a6d9;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+.eduka-deals {
+  background-color: #ffffff;
+  margin-left: -2.5rem;
+  margin-bottom: 5rem;
+  width: 87vw;
+  max-height: 75vh;
+  margin-top: -2rem;
+}
+.eduka-deals .card {
+  width: 95%;
+  height: 40vh;
+  border: none;
+}
+.eduka-deals a .card:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.eduka-deals .card img {
+  width: 100%;
+  object-fit: contain;
+}
+.eduka-deals h1 {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #60a6d9;
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+.eduka-featured-categories {
+  background-color: #ffffff;
+  margin-left: -2.5rem;
+  margin-bottom: 5rem;
+  width: 87vw;
+  max-height: 75vh;
+  margin-top: -2rem;
+}
+.eduka-featured-categories .card {
+  width: 95%;
+  height: 40vh;
+  border: none;
+}
+.eduka-featured-categories a .card:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.eduka-featured-categories .card img {
+  width: 100%;
+  object-fit: contain;
+}
+.eduka-featured-categories h1 {
   font-size: 23px;
   font-weight: bold;
   font-family: sans-serif;
