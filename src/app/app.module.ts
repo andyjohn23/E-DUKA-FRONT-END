@@ -7,13 +7,15 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductSlidesComponent } from './components/product-slides/product-slides.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ProductSlidesComponent
+    ProductSlidesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
