@@ -21,6 +21,9 @@
   display: flex;
   flex-direction: row;
 }
+.carousel-inner{
+  z-index: -1;
+}
 .carousel-inner img {
   width: 60vw;
   height: 65vh;
@@ -117,3 +120,7 @@
   font-family: sans-serif;
   color: black;
 }
+.featured-collection{
+  margin-top: 5rem;
+}
+
