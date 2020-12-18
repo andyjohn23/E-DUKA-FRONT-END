@@ -120,6 +120,18 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .featured-collection {
+    width: 69rem;
+    max-height: 75vh;
+  }
+  .eduka-deals {
+    width: 69rem;
+    max-height: 75vh;
+  }
+  .eduka-featured-categories {
+    width: 69rem;
+    max-height: 75vh;
+  }
 }
 
 /* iphone phones media query */

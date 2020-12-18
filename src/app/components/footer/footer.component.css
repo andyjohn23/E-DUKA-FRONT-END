@@ -19,6 +19,13 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .footer {
+    width: 69rem;
+    height: 20vh;
+    padding-top: 4rem;
+    margin-top: 20rem;
+    margin-bottom: -30rem;
+  }
 }
 
 /* iphone phones media query */
