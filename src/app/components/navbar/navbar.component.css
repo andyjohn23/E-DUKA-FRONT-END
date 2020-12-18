@@ -199,6 +199,29 @@ h4 {
     width: 100%;
     overflow-x: hidden;
   }
+  .front-view {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 72rem;
+  }
+  .need-help{
+    width: 72rem;
+  }
+  .navbar .search-form .form-control {
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .need-help img {
+    margin-left: 4rem;
+  }
+  .eduka-needhelp {
+    width: 100%;
+  }
+  .need-help .eduka-needhelp p {
+    font-size: 20px;
+  }
 }
 
 /* ipad pro media query */

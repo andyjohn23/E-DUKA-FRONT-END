@@ -164,6 +164,9 @@
     width: 69rem;
     display: none;
   }
+  .carousel-indicators {
+    display: none;
+  } 
 }
 
 /* iphone phones media query */
@@ -184,6 +187,9 @@
   .sell-on-eduka{
     width: 69rem;
     display: none;
+  }
+  .carousel-indicators {
+    display: none;
   }    
 }
 
@@ -193,6 +199,22 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .category-sidebar{
+    width: 400px;
+  }
+  .carousel-inner{
+    width: 61rem;
+  }
+  .slider{
+    width: 61rem;
+  }
+  .sell-on-eduka{
+    width: 69rem;
+    display: none;
+  }
+  .carousel-indicators {
+    display: none;
+  } 
 }
 
 /* ipad pro media query */
@@ -201,5 +223,21 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .category-sidebar{
+    width: 400px;
+  }
+  .carousel-inner{
+    width: 61rem;
+  }
+  .slider{
+    width: 61rem;
+  }
+  .sell-on-eduka{
+    width: 69rem;
+    display: none;
+  }
+  .carousel-indicators {
+    display: none;
+  } 
   
 }

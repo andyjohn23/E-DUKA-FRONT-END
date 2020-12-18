@@ -47,6 +47,13 @@
     width: 100%;
     overflow-x: hidden;
   }
+  .footer {
+    width: 72rem;
+    height: 15vh;
+    padding-top: 4rem;
+    margin-top: 20rem;
+    margin-bottom: -30rem;
+  }
 }
 
 /* ipad pro media query */
