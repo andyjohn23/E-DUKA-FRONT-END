@@ -115,9 +115,9 @@ h4 {
   color: #ffffff !important;
   padding-left: 0.2rem;
 }
-.cart:hover{
-    opacity: 0.8;
-    transition: 0.3s ease;
+.cart:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
 }
 .navbar .signin-link a {
   margin-top: 0.5rem;
@@ -127,7 +127,61 @@ h4 {
   font-family: sans-serif;
   color: #ffffff !important;
 }
-.navbar .signin-link a:hover{
-    opacity: 0.8;
-    transition: 0.3s ease;
+.navbar .signin-link a:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+/* small phones media query */
+@media screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* iphone phones media query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .front-view {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 69rem;
+  }
+  .need-help{
+    width: 69rem;
+  }
+  .navbar .search-form .form-control {
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .need-help img {
+    margin-left: 4rem;
+  }
+  .eduka-needhelp {
+    width: 100%;
+  }
+  .need-help .eduka-needhelp p {
+    font-size: 20px;
+  }
+}
+
+/* ipad media query */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* ipad pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }

@@ -114,3 +114,48 @@
 .container {
   width: 100vw;
 }
+/* small phones media query */
+@media screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* iphone phones media query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .featured-collection {
+    width: 69rem;
+    max-height: 75vh;
+  }
+  .eduka-deals {
+    width: 69rem;
+    max-height: 75vh;
+  }
+  .eduka-featured-categories {
+    width: 69rem;
+    max-height: 75vh;
+  }
+  
+}
+
+/* ipad media query */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+/* ipad pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+}

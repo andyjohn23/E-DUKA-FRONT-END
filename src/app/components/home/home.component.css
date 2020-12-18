@@ -1,5 +1,6 @@
 .category-sidebar {
   width: 17vw;
+  max-width: 500px;
   height: 65vh;
   background-color: #ffffff;
   border: 1px solid white;
@@ -19,8 +20,8 @@
 }
 .front-view {
   display: flex;
-  flex-direction: row;
   margin-left: 1.5rem;
+  flex-wrap: nowrap;
 }
 .carousel-inner{
   z-index: -1;
@@ -158,10 +159,19 @@
     width: 100%;
     overflow-x: hidden;
   }
-  .front-view{
-    display: flex;
-    flex-direction: row;
+  .category-sidebar{
+    width: 400px;
   }
+  .carousel-inner{
+    width: 61rem;
+  }
+  .slider{
+    width: 61rem;
+  }
+  .sell-on-eduka{
+    width: 69rem;
+    display: none;
+  }    
 }
 
 /* ipad media query */
