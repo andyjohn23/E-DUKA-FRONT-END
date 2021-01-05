@@ -1,0 +1,45 @@
+<div class="container registration-form selectDisable">
+    <div class="row">
+        <img src="/assets/images/logo.jpg" alt="logo" class="center">
+        <p>E-DUKA</p>
+        <div class="col-md-12">
+            <form id="get-form" class="form" method="POST">
+                <div class="form-group">
+                    <input [(ngModel)]="signup.email" type="email" class="form-control" name="email" id="email"
+                        autocomplete="off" placeholder=" " required />
+                    <label for="email" class="label-email">
+                        <span class="content-email">Email Address</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input [(ngModel)]="signup.first_name" type="text" class="form-control" name="lastname"
+                        id="firstname" autocomplete="off" placeholder=" " required />
+                    <label for="firstname" class="label-firstname">
+                        <span class="content-firstname">Firstname</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input [(ngModel)]="signup.last_name" type="text" class="form-control" name="lastname" id="lastname"
+                        autocomplete="off" placeholder=" " required />
+                    <label for="lastname" class="label-lastname">
+                        <span class="content-lastname">Lastname</span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input [(ngModel)]="signup.password" type="password" class="form-control" name="password"
+                        id="password" autocomplete="off" placeholder=" " required />
+                    <label for="password1" class="label-password2">
+                        <span class="content-password2">Password</span>
+                    </label>
+                </div>
+                <button (click)='signupUser()'>SignUp</button>
+            </form>
+            <div class="container have-an-account">
+                <p>Have an account?&nbsp;<a href="login">Log In</a></p>
+            </div>
+        </div>
+    </div>
+</div>

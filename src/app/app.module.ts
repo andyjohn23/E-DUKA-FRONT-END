@@ -8,6 +8,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductSlidesComponent } from './components/product-slides/product-slides.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,17 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     NavbarComponent,
     ProductSlidesComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent,
+    LoginComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public categories;
 
-  ngOnInit(): void {
+  constructor(private category: CategoryService) { }
+
+  ngOnInit() {
+    this.getCategories();
   }
 
-}
-class ExampleComponent {
- 
-  slides = [
-    {img: "/assets/images/edukaheadphones.jpg"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
-  ];
-  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
-  
+  getCategories() {
+    this.category.getAllCategory().subscribe(
+      data => {
+        this.categories = data;
+        console.log(data);
+
+      },
+      err => console.error(err),
+      () => console.log('done loading categories')
+    );
+  }
 }
