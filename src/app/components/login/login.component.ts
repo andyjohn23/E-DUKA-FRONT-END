@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsermanagerService } from 'src/app/services/usermanager.service';
 
 @Component({
   selector: 'app-login',
@@ -8,26 +9,54 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  input;
+  loginForm: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl: string;
 
-  constructor( private userService: AuthService, 
-    private router:Router ) { }
+  constructor( 
+    private userService: UsermanagerService, 
+    private router:Router,
+    private formBuilder: FormBuilder,
+    private route:ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
-    this.input={
-      'email':'',
-      'password':'',
-    }
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required ],
+      password: ['', Validators.required]
+    });
+
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  onLogin() {
-    this.userService.login(this.input).subscribe((res: Response) => {
-      console.log(res)
-      localStorage.setItem('loggedIn', res['token'])
-      this.router.navigate(['/'])
-    }, error => {
-      console.log('error');
-      this.router.navigate(['/signup']);
-    })
+  get f(){
+    return this.loginForm.controls;
   }
+
+  onSubmit(){
+    this.submitted = true;
+
+    if(this.loginForm.invalid){
+      return;
+    }
+
+    // console.log('submitted value', this.loginForm.value);
+
+    const email = this.loginForm.value.email;
+    const password = this.loginForm.value.password;
+
+    this.userService.authenticate(email, password).subscribe(
+      result => {
+        localStorage.setItem('token', result['access']);
+        localStorage.setItem('refresh', result['refresh']);
+        this.router.navigate(['/dashboard']);
+      },
+
+      error => {
+        console.log('error');
+      }
+    );
+  }
+
 }

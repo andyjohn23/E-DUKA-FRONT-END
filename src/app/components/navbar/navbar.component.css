@@ -2,7 +2,7 @@
 .navbar {
   background-color: #383838;
   position: sticky;
-  z-index: 21;
+  z-index: 22;
   width: 100vw;
 }
 .navbar .navbar-brand {

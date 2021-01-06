@@ -1,26 +1,35 @@
 <div class="container registration-form selectDisable">
     <img src="/assets/images/logo.jpg" alt="logo" class="center">
     <p>E-DUKA</p>
-    <form class="form">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-            <input type="email" [(ngModel)]="input.email" class="form-control" name="username" id="email"
-                autocomplete="off" placeholder=" " required />
+            <input type="email" formControlName="email" class="form-control" name="email" id="email"
+                autocomplete="off" placeholder=" " [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">email is required</div>
+            </div>
             <label for="email" class="label-email">
                 <span class="content-email">Email Address</span>
             </label>
         </div>
 
         <div class="form-group">
-            <input type="password" [(ngModel)]="input.password" class="form-control" name="password" id="password"
-                autocomplete="off" placeholder=" " required />
+            <input type="password" formControlName="password"  class="form-control" name="password" id="password"
+                autocomplete="off" placeholder=" " [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">password is required</div>
+            </div>
             <label for="login-password" class="label-loginpassword">
                 <span class="content-loginpassword">Password</span>
             </label>
         </div>
 
-        <button class="btn- btn-info" type="submit" value="Log In" (click)="onLogin()">Log In</button>
-        
+        <button [disabled]="loading" class="btn- btn-info" type="submit" value="Log In">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Log In
+        </button>
+
         <p class="forgot-password"><a href="">Forgot password?</a></p>
     </form>
     <div class="container dont-have-an-account">

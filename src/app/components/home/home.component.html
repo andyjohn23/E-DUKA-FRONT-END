@@ -2,10 +2,20 @@
 <div class="container">
     <div class="front-view">
         <div class="category-sidebar">
-            <a href="" *ngFor="let category of categories" class="linkStyle">
-                <img src="https://res.cloudinary.com/shitandi/{{ category.image }}" alt="cat-image">
-                {{ category.name }}
-            </a>
+            <li>
+                <a href="" *ngFor="let category of categories">
+                    <img src="https://res.cloudinary.com/shitandi/{{ category.image }}" alt="cat-image">
+                    {{ category.category }}
+                </a>
+                <ul>
+                    <li>
+                        <a href="" *ngFor="let category of categories">
+                            <img src="https://res.cloudinary.com/shitandi/{{ category.image }}" alt="cat-image">
+                            {{ category.sub-category.category }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </div>
 
         <div class="slider box">
@@ -47,7 +57,7 @@
     </div>
 
     <div class="welcome">
-      <p class="">WELCOME TO E-DUKA</p>
+        <p class="">WELCOME TO E-DUKA</p>
     </div>
 </div>
 
