@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Command } from 'protractor';
 import { CategoryService } from 'src/app/services/category.service';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-slides',
@@ -11,7 +14,7 @@ export class ProductSlidesComponent implements OnInit {
   public products;
   public categories;
 
-  constructor(private category: CategoryService) { }
+  constructor(private category: CategoryService, private product:ProductService, private router:Router) { }
 
   ngOnInit() {
     this.getProducts();
@@ -19,11 +22,10 @@ export class ProductSlidesComponent implements OnInit {
   }
 
   getProducts() {
-    this.category.getAllProducts().subscribe(
+    this.product.getAllProducts().subscribe(
       data => {
         this.products = data;
-        console.log(data);
-
+        // console.log(data);
       },
       err => console.error(err),
       () => console.log('done loading products')
@@ -34,11 +36,14 @@ export class ProductSlidesComponent implements OnInit {
     this.category.getAllCategory().subscribe(
       data => {
         this.categories = data;
-        console.log(data);
-
+        // console.log(data);
       },
       err => console.error(err),
       () => console.log('done loading categories')
     );
+  }
+
+  selectedProduct(item_name:string){
+    this.router.navigate(['/product', item_name]).then();
   }
 }

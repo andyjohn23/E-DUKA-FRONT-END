@@ -47,8 +47,9 @@
 }
 .featured-collection .card img {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   object-fit: cover;
+  cursor: pointer;
 }
 .featured-collection h1 {
   font-size: 22px;
@@ -76,8 +77,9 @@
 }
 .eduka-deals .card img {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   object-fit: cover;
+  cursor: pointer;
 }
 .eduka-deals h1 {
   font-size: 22px;

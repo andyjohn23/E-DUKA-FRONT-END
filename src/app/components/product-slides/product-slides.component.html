@@ -2,24 +2,22 @@
     <div class="featured-collection">
         <h1>Featured collections</h1>
         <div class="products">
-            <a href="">
-                <div class="product-cards">
-                    <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
-                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}</h4>
-                            <p class="card-text">Kshs. {{ product.price }}</p>
-                        </div>
+            <div class="product-cards">
+                <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                    <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                        alt="Card image cap" (click)="selectedProduct(product.item_name)">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.item_name | slice:0:15 }}</h4>
+                        <p class="card-text">Kshs. {{ product.price }}</p>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 
     <div class="eduka-deals">
         <h1>E-Duka Deals</h1>
-         <div class="products">
+        <div class="products">
             <a href="">
                 <div class="product-cards">
                     <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">

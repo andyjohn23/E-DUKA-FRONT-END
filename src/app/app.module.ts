@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { UsermanagerService } from './services/usermanager.service';
 import { CustomerProfileComponent } from './components/customer-profile/customer-profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -33,7 +34,8 @@ export function tokenGetter() {
     SignupComponent,
     LoginComponent,
     AlertComponent,
-    CustomerProfileComponent
+    CustomerProfileComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
