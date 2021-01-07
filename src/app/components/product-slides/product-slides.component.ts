@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-product-slides',
@@ -7,9 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductSlidesComponent implements OnInit {
 
-  constructor() { }
+  public products;
+  public categories;
 
-  ngOnInit(): void {
+  constructor(private category: CategoryService) { }
+
+  ngOnInit() {
+    this.getProducts();
+    this.getCategories();
   }
 
+  getProducts() {
+    this.category.getAllProducts().subscribe(
+      data => {
+        this.products = data;
+        console.log(data);
+
+      },
+      err => console.error(err),
+      () => console.log('done loading products')
+    );
+  }
+
+  getCategories() {
+    this.category.getAllCategory().subscribe(
+      data => {
+        this.categories = data;
+        console.log(data);
+
+      },
+      err => console.error(err),
+      () => console.log('done loading categories')
+    );
+  }
 }

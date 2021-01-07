@@ -1,63 +1,15 @@
 <div class="container">
     <div class="featured-collection">
         <h1>Featured collections</h1>
-        <div class="product-cards">
+        <div class="products">
             <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaperfume.jpg" alt="Card image cap">
+                <div class="product-cards">
+                    <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                            alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Perfume</h4>
-                            <p class="card-text">Kshs. 5500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/mask.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Protective Mask</h4>
-                            <p class="card-text">Kshs. 350</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/towel.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Bathing Towel</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukadigitalwatch.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Digital Watch</h4>
-                            <p class="card-text">Kshs. 2000</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                            <p class="initial-price">Kshs.4000</p>
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}</h4>
+                            <p class="card-text">Kshs. {{ product.price }}</p>
                         </div>
                     </div>
                 </div>
@@ -67,63 +19,15 @@
 
     <div class="eduka-deals">
         <h1>E-Duka Deals</h1>
-        <div class="product-cards">
+         <div class="products">
             <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
+                <div class="product-cards">
+                    <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                            alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukaheadphones.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Headphones</h4>
-                            <p class="card-text">Kshs. 3500</p>
-                            <p class="initial-price">Kshs.4000</p>
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}</h4>
+                            <p class="card-text">Kshs. {{ product.price }}</p>
                         </div>
                     </div>
                 </div>
@@ -133,57 +37,14 @@
 
     <div class="eduka-featured-categories">
         <h1>E-Duka Featured Categories</h1>
-        <div class="product-cards">
+        <div class="products">
             <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukatech.png" alt="Card image cap">
+                <div class="product-cards">
+                    <div class="card mb-2" *ngFor="let category of categories.slice(0, 5);">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ category.card }}"
+                            alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Electronics</h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukafashion.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Fashion</h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukashoes.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Shoes</h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukahealth.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Heaith & Beauty</h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="">
-                <div>
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="assets/images/edukawatch.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Watches</h4>
+                            <h4 class="card-title">{{ category.category | slice:0:15 }}</h4>
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,8 @@
     <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-            <input type="email" formControlName="email" class="form-control" name="email" id="email"
-                autocomplete="off" placeholder=" " [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <input type="email" formControlName="email" class="form-control" name="email" id="email" autocomplete="off"
+                placeholder=" " [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.email.errors.required">email is required</div>
             </div>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-group">
-            <input type="password" formControlName="password"  class="form-control" name="password" id="password"
+            <input type="password" formControlName="password" class="form-control" name="password" id="password"
                 autocomplete="off" placeholder=" " [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                 <div *ngIf="f.password.errors.required">password is required</div>
@@ -26,8 +26,10 @@
         </div>
 
         <button [disabled]="loading" class="btn- btn-info" type="submit" value="Log In">
-            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-            Log In
+            <div *ngIf="loading" class="spinner-border" role="status">
+                <span class="sr-only"></span>
+            </div>
+            <div>Log In</div>
         </button>
 
         <p class="forgot-password"><a href="">Forgot password?</a></p>

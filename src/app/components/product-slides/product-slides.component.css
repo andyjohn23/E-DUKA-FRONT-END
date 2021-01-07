@@ -20,10 +20,14 @@
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: auto;
   grid-gap: -1rem;
+  grid-column: 2rem;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
-.product-cards a {
+.products a{
+  text-decoration: none;
+}
+.products a:hover{
   text-decoration: none;
 }
 .featured-collection {
@@ -72,6 +76,7 @@
 }
 .eduka-deals .card img {
   width: 100%;
+  height: 20vh;
   object-fit: cover;
 }
 .eduka-deals h1 {
@@ -110,6 +115,9 @@
   color: #60a6d9;
   margin-left: 1rem;
   padding-top: 1rem;
+}
+.eduka-featured-categories h4{
+  text-transform: capitalize;
 }
 .container {
   width: 100vw;

@@ -14,4 +14,8 @@ export class CategoryService {
   getAllCategory(): Observable<any> {
     return this.http.get(this.baseurl + '/api/v1/categories/');
   }
+
+  getAllProducts(): Observable<any> {
+    return this.http.get(this.baseurl + '/api/v1/products/');
+  }
 }
