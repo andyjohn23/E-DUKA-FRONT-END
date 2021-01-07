@@ -43,7 +43,7 @@ export class ProductSlidesComponent implements OnInit {
     );
   }
 
-  selectedProduct(item_name:string){
-    this.router.navigate(['/product', item_name]).then();
+  selectedProduct(id: Number){
+    this.router.navigate(['/product', id]).then();
   }
 }

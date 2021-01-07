@@ -18,8 +18,4 @@ export class CategoryService {
   getAllProducts(): Observable<any> {
     return this.http.get(this.baseurl + '/api/v1/products/');
   }
-
-  getProduct(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/<int:pk>/');
-  }
 }

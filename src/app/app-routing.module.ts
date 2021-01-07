@@ -13,20 +13,20 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'signup',
+    path: '/signup/',
     component: SignupComponent
   },
   {
-    path: 'login',
+    path: '/login/',
     component: LoginComponent
   },
   {
-    path: 'dashboard',
+    path: '/dashboard/',
     component: CustomerProfileComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'product/:item_name',
+    path: '/product/:id',
     component: ProductDetailsComponent
   },
 ];
