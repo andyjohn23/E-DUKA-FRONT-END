@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.navbar {
+  background-color: #383838;
+  position: sticky;
+  z-index: 22;
+  width: 100vw;
+}
+.navbar .navbar-brand {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+.navbar-brand {
+  margin-left: 4rem;
+}
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.need-help {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+}
+.need-help img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-left: 2rem;
+}
+.need-help h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-top: 1rem;
+  padding-left: 2.2rem;
+}
+.need-help h3,
+h4 {
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  padding-left: 2rem;
+  padding-top: 1.2rem;
+  color: #60a6d9;
+}
+.need-help h3 {
+  animation: fadeInDown 3s infinite;
+}
+.need-help h4 {
+  animation: fadeInUp 3s infinite;
+}
+.need-help span {
+  padding-left: 2rem;
+  padding-top: 0.7rem;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.eduka-needhelp {
+  background-color: #60a6d9;
+  width: 40vw;
+  margin-left: 5rem;
+  height: 10vh;
+}
+.need-help .eduka-needhelp p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-top: 1rem;
+  letter-spacing: 2px;
+}
+.navbar form {
+  margin-left: 6rem;
+}
+.navbar .search-form .form-control {
+  width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.navbar .search-form button {
+  background-color: #60a6d9;
+  color: #ffffff;
+  font-weight: bolder;
+}
+.navbar .search-form button:hover {
+  opacity: 0.75;
+  background-color: #60a6d9;
+}
+.nav-item img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
+.cart span {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #ffffff !important;
+  padding-left: 0.2rem;
+}
+.cart a:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.navbar .signin-link a {
+  margin-top: 0.5rem;
+  margin-right: 5rem;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #ffffff !important;
+}
+.navbar .signin-link a:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+ul.dropdown-cart{
+  min-width:250px;
+  border: 2px solid #343434;
+  padding: 2px;
+  margin: 7px;
+  margin-top: 11px;
+}
+.dropdown-menu{
+  background-color: white;
+  overflow-y: auto;
+  height: auto !important;
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+}
+.dropdown-menu li a{
+  text-align: center !important;
+  margin-left: 5.2rem;
+  color: black !important;
+}
+.dropdown-menu p{
+  font-size: 16px;
+  padding-left: 0.5rem;
+  color: black !important;
+  font-weight: bold;
+  font-family:"Roboto", sans-serif;
+}
+.item-info span{
+  color: black !important;
+  font-size: 13px;
+}
+.item-left img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+ul.dropdown-cart li .item{
+  display:block;
+  padding:3px 10px;
+  margin: 3px 0;
+}
+ul.dropdown-cart li .item:hover{
+  background-color:white;
+}
+ul.dropdown-cart li .item:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: auto;
+  background-color: white;
+}
+ul.dropdown-cart li .item-left{
+  float:left;
+}
+ul.dropdown-cart li .item-left img,
+ul.dropdown-cart li .item-left span.item-info{
+  float:left;
+}
+ul.dropdown-cart li .item-left span.item-info{
+  margin-left:10px;   
+}
+ul.dropdown-cart li .item-left span.item-info span{
+  display:block;
+}
+ul.dropdown-cart li .item-right{
+  float:right;
+}
+ul.dropdown-cart li .item-right button{
+  margin-top:14px;
+}
+.dropdown-toggle::after {
+  display: none;
+} 
+/* small phones media query */
+@media screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .front-view {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 69rem;
+  }
+  .need-help {
+    width: 69rem;
+  }
+  .navbar .search-form .form-control {
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .need-help img {
+    margin-left: 4rem;
+  }
+  .eduka-needhelp {
+    width: 100%;
+  }
+  .need-help .eduka-needhelp p {
+    font-size: 20px;
+  }
+}
+
+/* iphone phones media query */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .front-view {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 69rem;
+  }
+  .need-help {
+    width: 69rem;
+  }
+  .navbar .search-form .form-control {
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .need-help img {
+    margin-left: 4rem;
+  }
+  .eduka-needhelp {
+    width: 100%;
+  }
+  .need-help .eduka-needhelp p {
+    font-size: 20px;
+  }
+}
+
+/* ipad media query */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .front-view {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar {
+    width: 72rem;
+  }
+  .need-help {
+    width: 72rem;
+  }
+  .navbar .search-form .form-control {
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .need-help img {
+    margin-left: 4rem;
+  }
+  .eduka-needhelp {
+    width: 100%;
+  }
+  .need-help .eduka-needhelp p {
+    font-size: 20px;
+  }
+}
+
+/* ipad pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

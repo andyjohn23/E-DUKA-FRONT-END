@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="featured-collection">
+        <h1>Featured collections</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                    <div class="card-click" (click)="selectedProduct(product.id)">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">Kshs. {{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="eduka-deals">
+        <h1>E-Duka Deals</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                    <div class="card-click" (click)="selectedProduct(product.id)">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">Kshs. {{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="eduka-featured-categories">
+        <h1>E-Duka Featured Categories</h1>
+        <div class="products">
+            <a href="">
+                <div class="product-cards">
+                    <div class="card mb-2" *ngFor="let category of categories.slice(0, 5);">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ category.card }}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ category.category | slice:0:15 }}...</h4>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
