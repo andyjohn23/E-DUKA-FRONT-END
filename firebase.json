@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/E-DUKA-FRONTEND",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
