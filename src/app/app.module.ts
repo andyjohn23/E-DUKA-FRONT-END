@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwtModule } from "@auth0/angular-jwt";
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './components/cart/cart.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -30,6 +31,7 @@ export function tokenGetter() {
     ProductDetailsComponent,
     ProductSlidesComponent,
     CustomerProfileComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
