@@ -27,10 +27,14 @@ export class ProductDetailsComponent implements OnInit {
     })
   }
 
-  AddToCart(){
-    this.cartService.addToCart(this.productData).subscribe(() => {
-      this.message.sendMessage(this.productData)
-    })
+  // AddToCart(){
+  //   this.cartService.addToCart(this.productData).subscribe(() => {
+  //     this.message.sendMessage(this.productData)
+  //   })
+  // }
+
+  AddToCart(id: number) {
+    this.cartService.AddProductToCart(id);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Command } from 'protractor';
+import { CartService } from 'src/app/services/cart.service';
 import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -12,20 +13,46 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductSlidesComponent implements OnInit {
 
   products: any[] = []
+  electronics: any[] = []
+  mavazi: any[] = []
   categories: any[] = []
 
   constructor(private category: CategoryService, private product:ProductService, 
-    private router:Router) { }
+    private router:Router, private cartService: CartService) { }
 
   ngOnInit() {
     this.getProducts();
     this.getCategories();
+    this.getCategoryProducts();
+    this.getCategoryClothing();
   }
 
   getProducts() {
     this.product.getAllProducts().subscribe(
       data => {
         this.products = data;
+        // console.log(data);
+      },
+      err => console.error(err),
+      () => console.log('done loading products')
+    );
+  }
+
+  getCategoryProducts() {
+    this.product.getCategoryProduct().subscribe(
+      data => {
+        this.electronics = data;
+        // console.log(data);
+      },
+      err => console.error(err),
+      () => console.log('done loading products')
+    );
+  }
+
+  getCategoryClothing() {
+    this.product.getCategoryMavazi().subscribe(
+      data => {
+        this.mavazi = data;
         // console.log(data);
       },
       err => console.error(err),
@@ -47,4 +74,9 @@ export class ProductSlidesComponent implements OnInit {
   selectedProduct(id: Number){
     this.router.navigate(['/product', id]).then();
   }
+
+  AddToCart(id: number) {
+    this.cartService.AddProductToCart(id);
+  }
+  
 }

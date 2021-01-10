@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwtModule } from "@auth0/angular-jwt";
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
+import {ToastrModule} from 'ngx-toastr';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -39,6 +41,8 @@ export function tokenGetter() {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    ToastrModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

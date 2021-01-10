@@ -5,10 +5,10 @@
             <div class="product-cards">
                 <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
                     <div class="card-click" (click)="selectedProduct(product.id)">
-                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                        <img class="card-img-top" src="{{ product.image }}"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
                             <p class="card-text">Kshs. {{ product.price }}</p>
                         </div>
                     </div>
@@ -21,12 +21,30 @@
         <h1>E-Duka Deals</h1>
         <div class="products">
             <div class="product-cards">
-                <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
+                <div class="card mb-2" *ngFor="let product of electronics.slice(0, 5);">
                     <div class="card-click" (click)="selectedProduct(product.id)">
-                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                        <img class="card-img-top" src="{{ product.image }}"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
+                            <p class="card-text">Kshs. {{ product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="eduka-deals">
+        <h1>E-Duka Mavazi</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2" *ngFor="let product of mavazi.slice(0, 5);">
+                    <div class="card-click" (click)="selectedProduct(product.id)">
+                        <img class="card-img-top" src="{{ product.image }}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
                             <p class="card-text">Kshs. {{ product.price }}</p>
                         </div>
                     </div>

@@ -9,14 +9,23 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductService {
   baseurl = environment.apiUrl;
+  apiUrl = environment.fakeApi;
 
   constructor(private http: HttpClient, private router:Router) { }
 
   getAllProducts(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/');
+    return this.http.get(this.apiUrl + '/products/');
+  }
+
+  getCategoryProduct(): Observable<any> {
+    return this.http.get(this.apiUrl + '/products/category/electronics/');
+  }
+
+  getCategoryMavazi(): Observable<any> {
+    return this.http.get(this.apiUrl + '/products/category/women clothing/');
   }
 
   getProduct(id: Number): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/' + id);
+    return this.http.get(this.apiUrl + '/products/' + id);
   }
 }
