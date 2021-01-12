@@ -1,0 +1,98 @@
+<style> 
+    Body {
+        font-family: Calibri, Helvetica, sans-serif;
+        background-color: rgb(250, 250, 250);
+    }
+    button { 
+            background-color: #1c94da; 
+            width: 100%;
+            color: rgb(0, 0, 0); 
+            padding: 15px; 
+            margin: 10px 0px; 
+            border: none; 
+            cursor: pointer; 
+                } 
+    form { 
+        border: 3px solid #ffffff; 
+    } 
+    input[type=text], input[type=password],  input[type=email] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid rgb(0, 0, 0); 
+        box-sizing: border-box; 
+    }
+    button:hover { 
+        opacity: 0.7; 
+    } 
+    .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+        
+    
+    .row { 
+        padding: 25px; 
+        background-color: rgb(236, 236, 236);
+    } 
+    </style> 
+    <h1 style="text-align: center;"> Merchant Form </h1>
+    <div class="row">
+        <img src="/assets/images/logo.jpg" alt="logo" class="center">
+        <p>E-DUKA</p>
+        <div class="col-md-12">
+            <form id="get-form" class="form" method="POST">
+                <div class="form-group">
+                    <label for="storename" class="label-storename">
+                        <span class="content-storename">Store Name :</span>
+                    </label>
+                    <input [(ngModel)]="registration.store_name" type="text" class="form-control" name="storename" id="storename"
+                        autocomplete="off" placeholder="Store Name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="description" class="label-description">
+                        <span class="content-description">Description :</span>
+                    </label>
+                    <input [(ngModel)]="registration.description" type="text" class="form-control" name="description"
+                        id="description" autocomplete="off" placeholder="Description" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="label-address">
+                        <span class="content-address">Address :</span>
+                    </label>
+                    <input [(ngModel)]="registration.address" type="text" class="form-control" name="address" id="address"
+                        autocomplete="off" placeholder="Address" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="label-city">
+                        <span class="content-city">City :</span>
+                    </label>
+                    <input [(ngModel)]="registration.city" type="text" class="form-control" name="city" id="city"
+                        autocomplete="off" placeholder="City" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="country" class="label-country">
+                        <span class="content-country">Country :</span>
+                    </label>
+                    <input [(ngModel)]="registration.country" type="text" class="form-control" name="country" id="country"
+                        autocomplete="off" placeholder="Country" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone no." class="label-phone no.">
+                        <span class="content-phone no.">Phone No. :</span>
+                    </label>
+                    <input [(ngModel)]="registration.phone_no" type="text" class="form-control" name="phone no." id="phone no."
+                        autocomplete="off" placeholder="Phone No." required />
+                </div>
+                <button (click)='registerUser()'>Shop</button>
+            </form>
+
+        </div>
+    </div>

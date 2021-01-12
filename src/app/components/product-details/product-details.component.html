@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="product">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-7">
+                    <img src="https://res.cloudinary.com/shitandi/{{ productData.image }}" class="card-img"
+                        alt="{{ productData.item_name }}">
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ productData.item_name }}</h5>
+                        <P class="card-text">{{ productData.description }}</P>
+                        <button>KSh {{ productData.price }}&nbsp;&nbsp;<span>KSh {{ productData.previous_price }}</span></button>
+                        <p>Shipping From: <span style="text-transform: uppercase;">{{ productData.shipped_from }}</span></p>
+                        <p *ngIf="productData.color">Color: <span>{{ productData.color }}</span></p>
+                        <p *ngIf="productData.size">Size: <span>{{ productData.size }}</span></p>
+                        <a (click)="AddToCart()"><button><i class="fa fa-shopping-cart" aria-hidden="true"></i>ADD TO CART</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
