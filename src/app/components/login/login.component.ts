@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
       result: User) => {
         localStorage.setItem('token', result['access']);
         localStorage.setItem('refresh', result['refresh']);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['']);
       },
 
       error => {

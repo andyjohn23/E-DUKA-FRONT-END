@@ -1,0 +1,68 @@
+button { 
+    background-color: #1c94da; 
+    width: 100%;
+    color: rgb(0, 0, 0); 
+    padding: 15px; 
+    margin: 10px 0px; 
+    border: none; 
+    cursor: pointer; 
+} 
+
+form { 
+    border: 3px solid #ffffff; 
+} 
+
+input[type=text], input[type=password],  input[type=string] { 
+    width: 100%; 
+    margin: 8px 0;
+    padding: 12px 20px; 
+    display: inline-block; 
+    border: 2px solid rgb(0, 0, 0); 
+    box-sizing: border-box; 
+}
+
+button:hover { 
+    opacity: 0.7; 
+} 
+
+.row { 
+    margin-left: 400px;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 50%; 
+    align-items: center;   
+} 
+
+.center{
+  width: 80px;
+  height: 80px; 
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input{
+  text-align: center;   
+}
+
+/* p{
+  padding-right: 350px;
+  padding-top: 100px;
+} */
+
+/* ipad media query */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+/* ipad pro media query */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

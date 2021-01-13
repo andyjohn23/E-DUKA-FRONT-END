@@ -21,13 +21,13 @@ export class RegistrationService {
     return !this.JwtHelper.isTokenExpired(token);
   }
 
-  AddUser(user): Observable<any> {
+  AddShop(user): Observable<any> {
     return this.http.post(this.baseurl + '/api/v1/shops/', user,
       { headers: this.httpHeaders })
   }
 
-  getUser(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/profile/',
+  getShop(): Observable<any> {
+    return this.http.get(this.baseurl + '/api/v1/shops/',
       { headers: this.httpHeaders })
   }
 

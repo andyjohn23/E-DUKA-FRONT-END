@@ -24,11 +24,11 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
-  registerUser() {
-    this.RegistrationService.AddUser(this.registration).subscribe(
+  registerShop() {
+    this.RegistrationService.AddShop(this.registration).subscribe(
       response => {
-        alert('user ' + this.registration.store_name + ' has been created')
-        this.router.navigate(['/shops'])
+        alert('user' + this.registration.store_name + ' has been created')
+        this.router.navigate([' '])
       },
       error => console.log('error', error)
     )
