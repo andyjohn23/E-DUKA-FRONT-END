@@ -1,0 +1,83 @@
+<ngx-spinner bdColor="rgba(151,149,149,0.4)" size="large" color="orange" type="ball-clip-rotate-pulse"
+    fullScreen="true">
+    <p style="font-size: 20px; color: black">Placing Order...</p>
+</ngx-spinner>
+
+<nav class="navbar navbar-expand">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/images/logo.jpg" alt="logo">&nbsp;E-DUKA
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="container checkout" *ngIf="cartData.total > 0">
+    <div class="row">
+        <div class="col-60">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <div class="form-group">
+                                <input class="input" type="text" name="first-name" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="last-name" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="address" placeholder="Address">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="city" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="tel" name="tel" placeholder="Telephone">
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <div class="icon-container">
+                                <img src="assets/images/edukampesa.png" alt="payment">
+                            </div>
+                            <form>
+                                <label for="cname">M-pesa Number</label>
+                                <input type="text" id="cname" name="cardname" placeholder="M-pesa Number">
+                                <input type="submit" value="Send Payment Message" class="btn">
+                            </form>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-25">
+            <div class="container" class="orders">
+                <h4>YOUR ORDER( {{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}} item(s))</h4>
+                <div *ngFor="let c of cartData.data;">
+                    <img src="https://res.cloudinary.com/shitandi/{{ c.product.image }}" alt="{{c.product.item_name}}"
+                        alt="" class="itemImg" />
+                    <p>Qty:{{c.numInCart}} {{c.product.item_name}}&nbsp;<span
+                            class="price">{{(c.product.price*c.numInCart) | currency:'KSh '}}</span></p>
+                </div>
+                <hr>
+                <p>Total <span class="price" style="color:black"><b>{{cartTotal | currency:'KSh '}}</b></span></p>
+
+                <p class="text-center"><a routerLink="/cart">MODIFY CART</a></p>
+                <input type="submit" (click)="onCheckout()" value="Place Order" class="btn">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cartData.total <= 0" class="text-center my-5 go-shop">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <h4>Your Cart Is Empty</h4>
+    <button class="mt-3 go-to-shop" routerLink="/">GO TO SHOP</button>
+</div>
+<app-footer></app-footer>

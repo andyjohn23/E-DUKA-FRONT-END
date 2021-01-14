@@ -2,9 +2,9 @@
 <div class="container">
     <div class="front-view">
         <div class="category-sidebar">
-            <li>
-                <a href="" *ngFor="let category of categories">
-                    <img src="https://res.cloudinary.com/shitandi/{{ category.image }}" alt="cat-image">
+            <li *ngFor="let category of categories">
+                <a href="category/{{ category.id }}">
+                    <img src="https://res.cloudinary.com/shitandi/{{ category.image }}" alt="{{ category.category }}">
                     {{ category.category }}
                 </a>
             </li>

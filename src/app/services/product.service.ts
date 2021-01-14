@@ -13,10 +13,18 @@ export class ProductService {
   constructor(private http: HttpClient, private router:Router) { }
 
   getAllProducts(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/');
+    return this.http.get(this.baseurl + '/products/');
   }
 
-  getProduct(id: Number): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/' + id);
+  getProduct(id: number): Observable<any> {
+    return this.http.get(this.baseurl + '/products/' + id);
+  }
+
+  getCategorySubs(id): Observable<any> {
+    return this.http.get(this.baseurl + '/category_filter/' + id);
+  }
+
+  getSubcategoryProducts(id): Observable<any> {
+    return this.http.get(this.baseurl + '/filter_sub_category/' + id);
   }
 }

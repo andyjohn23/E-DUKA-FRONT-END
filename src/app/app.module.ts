@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -15,6 +14,13 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwtModule } from "@auth0/angular-jwt";
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
+import {ToastrModule} from 'ngx-toastr';
+import {NgxSpinnerModule} from "ngx-spinner";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CategoryProductsComponent } from './components/category-products/category-products.component';
+import { SubCategoryComponent } from './components/sub-category/sub-category.component';
+
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -32,6 +38,9 @@ export function tokenGetter() {
     ProductSlidesComponent,
     CustomerProfileComponent,
     CartComponent,
+    CheckoutComponent,
+    CategoryProductsComponent,
+    SubCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,12 @@ export function tokenGetter() {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    ToastrModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,

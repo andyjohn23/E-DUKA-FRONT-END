@@ -46,8 +46,8 @@ img {
   *zoom: 1;
 }
 .wrap {
-  width: 75%;
-  max-width: 960px;
+  width: auto;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 5% 0;
   margin-bottom: 5em;
@@ -159,7 +159,7 @@ img {
   margin-bottom: 0.5em;
 }
 .cart .items .cartSection h3 {
-  font-size: 1em;
+  font-size: 13px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -228,7 +228,7 @@ a.remove {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   font-weight: bold;
-  background: #e0e0e0;
+  background: #6f6f6f;
   padding: 0.5em;
   font-size: 0.75em;
   display: inline-block;
@@ -242,6 +242,7 @@ a.remove {
 }
 a.remove:hover {
   background: #f30;
+  cursor: pointer;
 }
 .btn:link,
 .btn:visited {
@@ -283,7 +284,6 @@ a.remove:hover {
 .btn:active:after {
   right: -10px;
 }
-/* TOTAL AND CHECKOUT  */
 .subtotal {
   float: right;
   width: 35%;
@@ -310,6 +310,74 @@ a.remove:hover {
 .subtotal .totalRow .value {
   letter-spacing: -0.025em;
   width: 35%;
+}
+.increase_quantity, .decrease_quantity {
+  cursor: pointer;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  padding: 10px 0 12px;
+  text-align: center;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.go-to-shop{
+  background-color: #60a6d9;
+  outline: none;
+  border: none;
+  margin-bottom: 5.5rem;
+}
+.go-shop i{
+  font-size: 80px;
+  color: #4E4E4E;
+  margin-top: 2.5rem;
+}
+.go-shop h4{
+  font-size: 30px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.cartSection span {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #a6a7a9;
+  text-decoration: line-through;
 }
 
 @media only screen and (max-width: 39.375em) {

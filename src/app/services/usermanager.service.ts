@@ -26,7 +26,7 @@ export class UsermanagerService {
 
   authenticate(email: string, password: string) {
     const data = { 'email': email, 'password': password };
-    return this.http.post(this.loginUrl + '/api/token/', data, this.options)
+    return this.http.post(this.loginUrl + '/token/', data, this.options)
       .pipe(
         catchError(this.handleError)
       );

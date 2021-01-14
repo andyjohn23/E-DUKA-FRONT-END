@@ -31,7 +31,7 @@
             <li class="nav-item  cart">
                 <a href="cart">
                     <img src="assets/images/edukacart.png" alt="cart">
-                    <span class='badge badge-warning' id='lblCartCount'> 5 </span>
+                    <span *ngIf="cartData.total > 0" class='badge badge-warning' id='lblCartCount'>{{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}}</span>
                     <span>Cart</span>
                 </a>
             </li>

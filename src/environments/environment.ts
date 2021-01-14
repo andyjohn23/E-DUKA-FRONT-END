@@ -1,7 +1,6 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://shitandi-duka.herokuapp.com',
-  cartApi: 'http://localhost:3000/cart',
+  apiUrl: 'https://shitandi-duka.herokuapp.com/api/v1',
   firebaseConfig:{
     apiKey: "AIzaSyBbjmP-e1g_fvjPbXGXbsFKvpB52dW_LQM",
     authDomain: "e-duka-45fe2.firebaseapp.com",

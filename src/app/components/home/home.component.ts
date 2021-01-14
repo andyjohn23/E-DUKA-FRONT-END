@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Category } from 'src/app/models/category';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -10,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   public categories;
 
-  constructor(private category: CategoryService) { }
+  constructor(private category: CategoryService, private router: Router) { }
 
   ngOnInit() {
     this.getCategories();
@@ -20,8 +22,6 @@ export class HomeComponent implements OnInit {
     this.category.getAllCategory().subscribe(
       data => {
         this.categories = data;
-        console.log(data);
-
       },
       err => console.error(err),
       () => console.log('done loading categories')

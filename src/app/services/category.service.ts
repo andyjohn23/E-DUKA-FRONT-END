@@ -12,10 +12,10 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   getAllCategory(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/categories/');
+    return this.http.get(this.baseurl + '/categories/');
   }
 
   getAllProducts(): Observable<any> {
-    return this.http.get(this.baseurl + '/api/v1/products/');
+    return this.http.get(this.baseurl + '/products/');
   }
 }
