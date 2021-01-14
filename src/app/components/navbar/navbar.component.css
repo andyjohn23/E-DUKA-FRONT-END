@@ -133,23 +133,26 @@ h4 {
   transition: 0.3s ease;
 }
 .badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
+  /* padding-left: 12px;
+  padding-right: 12px; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
 }
 .label-warning[href],
 .badge-warning[href] {
   background-color: #c67605;
 }
 #lblCartCount {
-  font-size: 12px;
-  background: #ff0000;
+  font-size: 13px;
+  background: #60a6d9;
   color: #fff;
-  padding: 0 5px;
+  padding-left: 0.4rem;
+  padding-top: 0.3rem;
   vertical-align: top;
-  margin-left: -10px;
+  margin-left: -13px;
 }
 ul.dropdown-cart{
   min-width:250px;

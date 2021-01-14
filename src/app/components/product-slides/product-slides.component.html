@@ -5,11 +5,12 @@
             <div class="product-cards">
                 <div class="card mb-2" *ngFor="let product of products.slice(0, 5);">
                     <div class="card-click" (click)="selectedProduct(product.id)">
-                        <img class="card-img-top" src="{{ product.image }}"
-                            alt="Card image cap">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
+                            alt="{{ product.item_name | slice:0:15 }}...">
                         <div class="card-body">
-                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
-                            <p class="card-text">Kshs. {{ product.price }}</p>
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">{{ product.price | currency:'KSh ' }}</p>
+                            <p class="initial-price" *ngIf="product.previous_price">{{ product.previous_price | currency:'KSh ' }}</p>
                         </div>
                     </div>
                 </div>
@@ -21,31 +22,14 @@
         <h1>E-Duka Deals</h1>
         <div class="products">
             <div class="product-cards">
-                <div class="card mb-2" *ngFor="let product of electronics.slice(0, 5);">
+                <div class="card mb-2" *ngFor="let product of products.slice(6, 11);">
                     <div class="card-click" (click)="selectedProduct(product.id)">
-                        <img class="card-img-top" src="{{ product.image }}"
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ product.image }}"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
-                            <p class="card-text">Kshs. {{ product.price }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="eduka-deals">
-        <h1>E-Duka Mavazi</h1>
-        <div class="products">
-            <div class="product-cards">
-                <div class="card mb-2" *ngFor="let product of mavazi.slice(0, 5);">
-                    <div class="card-click" (click)="selectedProduct(product.id)">
-                        <img class="card-img-top" src="{{ product.image }}"
-                            alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">{{ product.title | slice:0:15 }}...</h4>
-                            <p class="card-text">Kshs. {{ product.price }}</p>
+                            <h4 class="card-title">{{ product.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">{{ product.price | currency:'KSh ' }}</p>
+                            <p class="initial-price" *ngIf="product.previous_price">{{ product.previous_price | currency:'KSh ' }}</p>
                         </div>
                     </div>
                 </div>
@@ -56,17 +40,17 @@
     <div class="eduka-featured-categories">
         <h1>E-Duka Featured Categories</h1>
         <div class="products">
-            <a href="">
-                <div class="product-cards">
-                    <div class="card mb-2" *ngFor="let category of categories.slice(0, 5);">
+            <div class="product-cards">
+                <div class="card mb-2 product" *ngFor="let category of categories.slice(0, 5);">
+                    <a href="category/{{ category.id }}">
                         <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ category.card }}"
                             alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">{{ category.category | slice:0:15 }}...</h4>
+                            <h4 class="card-title">{{ category.category | slice:0:15 }}</h4>
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="sub-category-background">
+        <h1>(All {{ category.length }} Results)</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2 product" *ngFor="let subs of category">
+                    <div class="card-click" (click)="selectedProduct(subs.id)">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ subs.image }}"
+                            alt="{{ subs.name | slice:0:15 }}">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ subs.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">{{ subs.price | currency:'KSh ' }}</p>
+                            <p class="initial-price" *ngIf="subs.previous_price">{{ subs.previous_price | currency:'KSh ' }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+
+
+<!-- <div class="container">
+    <div class="featured-collection">
+        <h1>Featured collections</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2" *ngFor="let subs of category">
+                    <div class="card-click" (click)="selectedProduct(subs.id)">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ subs.image }}"
+                            alt="{{ subs.name | slice:0:15 }}">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ subs.item_name | slice:0:15 }}...</h4>
+                            <p class="card-text">{{ subs.price | currency:'KSh ' }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="sub-category-background">
+        <h1>(All {{ category.length }} Results)</h1>
+        <div class="products">
+            <div class="product-cards">
+                <div class="card mb-2 product" *ngFor="let subs of category">
+                    <a href="sub-category/{{ subs.id }}">
+                        <img class="card-img-top" src="https://res.cloudinary.com/shitandi/{{ subs.image2 }}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ subs.name | slice:0:15 }}</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,53 +1,59 @@
 <app-navbar></app-navbar>
-<div class="wrap cf">
-    <div class="heading cf">
-        <h1>Cart</h1>
-        <a href="/" class="continue">Continue Shopping</a>
-    </div>
-    <div class="cart">
-        <ul class="cartWrap">
-            <li class="items even">
-                <div class="infoWrap">
-                    <div class="cartSection">
-                        <img src="assets/images/edukaheadphones.jpg" alt="" class="itemImg" />
-                        <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Item Name 1</h3>
-                        <p> <input type="text" class="qty" placeholder="3" /> x ksh 5.00</p>
-                    </div>
-                    <div class="prodTotal cartSection">
-                        <p>KSh 1500.00</p>
-                    </div>
-                    <div class="cartSection removeWrap">
-                        <a href="#" class="remove">x</a>
-                    </div>
-                </div>
-            </li>
-            <li class="items even">
-                <div class="infoWrap">
-                    <div class="cartSection info">
-                        <img src="assets/images/edukaheadphones.jpg" alt="" class="itemImg" />
-                        <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Item Name 1</h3>
-                        <p> <input type="text" class="qty" placeholder="3" /> x ksh 5.00</p>
-                    </div>
-                    <div class="prodTotal cartSection">
-                        <p>KSh 1500.00</p>
-                    </div>
-                    <div class="cartSection removeWrap">
-                        <a href="#" class="remove">x</a>
-                    </div>
-                </div>
-            </li>
-        </ul>
+<div class="container">
+    <div *ngIf="cartData.data[0].numInCart === 0;" class="text-center my-5 go-shop">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <h4>Your Cart Is Empty</h4>
+        <button class="btn btn-primary btn-lg mt-3 go-to-shop" routerLink="/">START SHOPPING</button>
     </div>
 
-    <div class="subtotal cf">
-        <ul>
-            <li class="totalRow"><span class="label">Subtotal</span><span class="value">KSh 3000.00</span></li>
-            <li class="totalRow"><span class="label">Shipping</span><span class="value">KSh 200.00</span></li>
-            <li class="totalRow final"><span class="label">Total</span><span class="value">KSh 3200.00</span></li>
-            <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
-        </ul>
-    </div>
+    <ng-container *ngIf="cartData.data[0].numInCart !== 0">
+        <div class="wrap cf">
+            <div class="heading cf">
+                <h1>Cart</h1>
+                <a href="/" class="continue">Continue Shopping</a>
+            </div>
+            <div class="cart">
+                <ul class="cartWrap">
+                    <li class="items even" *ngFor="let c of cartData.data; let i=index">
+                        <div class="infoWrap">
+                            <div class="cartSection">
+                                <img src="https://res.cloudinary.com/shitandi/{{ c.product.image }}" alt="{{c.product.item_name}}" alt="" class="itemImg" />
+                                <p class="itemNumber">#QUE-007544-002</p>
+                                <h3>{{c.product.item_name}}</h3>
+                                <div class="value-button" id="decrease" (click)="ChangeQuantity(i, false)">
+                                    <i class="fa fa-minus"></i>
+                                </div>
+                                <input type="number" id="number" [value]="c.numInCart" readonly
+                                    [max]="c.product.quantity" />
+                                <div class="value-button" id="increase" (click)="ChangeQuantity(i, true)">
+                                    <i class="fa fa-plus"></i>
+                                </div>&nbsp;&nbsp;
+                                <p>x {{c.product.price | currency:'KSh '}}</p>&nbsp;
+                                <span *ngIf="c.product.previous_price">
+                                    ({{ c.product.previous_price | currency:'KSh ' }})</span>
+                            </div>
+                            <div class="prodTotal cartSection">
+                                <p>{{cartService.CalculateSubTotal(i) | currency:'KSh '}}</p>
+                            </div>
+                            <div class="cartSection removeWrap">
+                                <a (click)="cartService.DeleteProductFromCart(i)" class="remove">x</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="subtotal cf">
+                <ul>
+                    <!-- <li class="totalRow"><span class="label">Subtotal</span><span class="value">KSh 3000.00</span></li>
+                    <li class="totalRow"><span class="label">Shipping</span><span class="value">KSh 200.00</span></li> -->
+                    <li class="totalRow final"><span class="label">Total</span><span class="value">
+                            {{cartTotal | currency:'KSh '}}</span>
+                    </li>
+                    <li class="totalRow"><a routerLink="/checkout" class="btn continue">Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+    </ng-container>
 </div>
 <app-footer></app-footer>

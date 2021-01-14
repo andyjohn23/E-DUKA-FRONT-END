@@ -6,60 +6,8 @@
       "author": "typicode"
     }
   ],
-  "orders": [
-    {
-      "product": {
-        "id": 4,
-        "item_name": "headphones",
-        "description": "headphones",
-        "price": 3000,
-        "date_added": "2021-01-09T16:36:58.927568+03:00",
-        "image": "image/upload/v1610199419/xxwqkrryqfousx3kzgyj.jpg",
-        "sub_category": 1,
-        "quantity": 5,
-        "color": "black",
-        "previous_price": 2000,
-        "shipped_from": "e-duka",
-        "size": "",
-        "brand": ""
-      },
-      "id": 1
-    }
-  ],
-  "cart": [
-    {
-      "product": {
-        "id": 4,
-        "item_name": "headphones",
-        "description": "headphones",
-        "price": 3000,
-        "date_added": "2021-01-09T16:36:58.927568+03:00",
-        "image": "image/upload/v1610199419/xxwqkrryqfousx3kzgyj.jpg",
-        "sub_category": 1,
-        "quantity": 5,
-        "color": "black",
-        "previous_price": 2000,
-        "shipped_from": "e-duka",
-        "size": "",
-        "brand": ""
-      },
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "product": {
-        "id": 4,
-        "title": "Mens Casual Slim Fit",
-        "price": 15.99,
-        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-        "category": "men clothing",
-        "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
-      },
-      "id": 3
-    }
-  ],
+  "orders": [],
+  "cart": [],
   "payment": [],
   "comments": [
     {
