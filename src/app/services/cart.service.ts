@@ -199,53 +199,7 @@ export class CartService {
     }
   }
 
-  // CheckoutFromCart(userId: Number) {
-
-  //   this.http.post(`${this.baseurl}api/v1/orders/`, null).subscribe((res: { success: Boolean }) => {
-  //     console.clear();
-
-  //     if (res.success) {
-
-
-  //       this.resetServerData();
-  //       this.http.post(`${this.baseurl}api/v1/orders/`, {
-  //         userId: userId,
-  //         products: this.cartData.proddata
-  //       }).subscribe((data: OrderConfirmationResponse) => {
-
-  //         this.orderService.getSingleOrder(data.order_id).then(prods => {
-  //           if (data.success) {
-  //             const navigationExtras: NavigationExtras = {
-  //               state: {
-  //                 message: data.message,
-  //                 products: prods,
-  //                 orderId: data.order_id,
-  //                 total: this.cartData.total
-  //               }
-  //             };
-  //             this.spinner.hide().then();
-  //             this.router.navigate(['/thankyou'], navigationExtras).then(p => {
-  //               this.cartData = {prodData: [{incart: 0, id: 0}], total: 0};
-  //               this.cartTotal$.next(0);
-  //               localStorage.setItem('cart', JSON.stringify(this.cartData));
-  //             });
-  //           }
-  //         });
-
-  //       })
-  //     } else {
-  //       this.spinner.hide().then()
-  //       this.router.navigateByUrl('/checkout').then();
-  //       this.toast.error(`Sorry, failed to book the order`, "Order Status", {
-  //         timeOut: 1500,
-  //         progressBar: true,
-  //         progressAnimation: 'increasing',
-  //         positionClass: 'toast-top-full-width'
-  //       })
-  //     }
-  //   })
-  // }
-
+  
   private CalculateTotal() {
     let Total = 0;
 
